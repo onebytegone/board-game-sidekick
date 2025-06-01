@@ -7,9 +7,13 @@
             :active="route.path === item.to"
             link
             :to="item.to"
-            :prepend-icon="item.icon"
             :title="item.title"
-         />
+         >
+            <template #prepend>
+               <v-icon v-if="item.icon === 'robot-meeple'"><RobotMeeple /></v-icon>
+               <v-icon v-else-if="item.icon">{{ item.icon }}</v-icon>
+            </template>
+         </v-list-item>
       </v-list>
    </v-navigation-drawer>
 </template>
@@ -18,6 +22,7 @@
 import { routes } from '@/router/routes';
 import { computed } from 'vue';
 import { useRoute } from 'vue-router';
+import RobotMeeple from '@/assets/robot-meeple.svg?component';
 
 const props = defineProps<{ drawer: boolean }>();
 const emit = defineEmits(['update:drawer']);

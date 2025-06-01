@@ -13,7 +13,7 @@ export interface RouteConfig {
 export const routes: Record<NamedRoute, RouteConfig> = {
    [NamedRoute.Home]: {
       path: '/',
-      icon: 'mdi-home',
+      icon: 'robot-meeple',
       navTitle: 'Home',
    },
    [NamedRoute.DieRoller]: {
