@@ -29,6 +29,7 @@ export const router = createRouter({
    routes: [
       ...makeRoute(NamedRoute.Home),
       ...makeRoute(NamedRoute.RftGTheFirstEmperor),
+      ...makeRoute(NamedRoute.FinspanFundamental),
       ...makeRoute(NamedRoute.DieRoller),
    ],
 });

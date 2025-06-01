@@ -4,6 +4,7 @@ export enum NamedRoute {
    Home = 'home',
    RftGTheFirstEmperor = 'rftg-the-first-emperor',
    DieRoller = 'die-roller',
+   FinspanFundamental = 'finspan-fundamental',
 }
 
 export interface RouteConfig {
@@ -46,6 +47,24 @@ export const routes: Record<NamedRoute, RouteConfig> = {
             path: 'endgame',
             pageTitle: 'End Game',
             component: () => import('../pages/automatons/RftGTheFirstEmperor/EndGame.vue'),
+         },
+      ],
+   },
+   [NamedRoute.FinspanFundamental]: {
+      path: `/${NamedRoute.FinspanFundamental}`,
+      pageTitle: 'Finspan: Fundamental',
+      icon: 'mdi-fish',
+      component: () => import('../pages/automatons/FinspanFundamental/index.vue'),
+      children: [
+         {
+            path: 'setup',
+            pageTitle: 'Finspan: Setup',
+            component: () => import('../pages/automatons/FinspanFundamental/Setup.vue'),
+         },
+         {
+            path: 'gameplay',
+            pageTitle: 'Finspan: Fundamental',
+            component: () => import('../pages/automatons/FinspanFundamental/Gameplay.vue'),
          },
       ],
    },

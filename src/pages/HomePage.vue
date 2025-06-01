@@ -48,5 +48,11 @@ const links = [
       subtitle: 'An automaton for Race For The Galaxy',
       title: 'RftG: The First Emperor',
    },
+   {
+      href: router.resolve({ name: NamedRoute.FinspanFundamental }).href,
+      icon: 'mdi-fish',
+      subtitle: 'An automaton for Finspan',
+      title: 'Finspan Fundamental',
+   },
 ];
 </script>

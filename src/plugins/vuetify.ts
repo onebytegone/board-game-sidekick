@@ -12,6 +12,7 @@ export const vuetify = createVuetify({
             colors: {
                primary: '#455a64',
                accent: '#ffc107',
+               info: '#B0BEC5',
             },
          },
          light: {
@@ -19,6 +20,7 @@ export const vuetify = createVuetify({
             colors: {
                primary: '#455a64',
                accent: '#ffc107',
+               info: '#B0BEC5',
             },
          },
       },
