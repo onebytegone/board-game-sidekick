@@ -6,5 +6,21 @@ import { createVuetify } from 'vuetify';
 export const vuetify = createVuetify({
    theme: {
       defaultTheme: 'dark',
+      themes: {
+         dark: {
+            dark: true,
+            colors: {
+               primary: '#455a64',
+               accent: '#ffc107',
+            },
+         },
+         light: {
+            dark: false,
+            colors: {
+               primary: '#455a64',
+               accent: '#ffc107',
+            },
+         },
+      },
    },
 });

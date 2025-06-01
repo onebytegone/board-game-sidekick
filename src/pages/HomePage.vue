@@ -16,6 +16,7 @@
                   :href="link.href"
                   :prepend-icon="link.icon"
                   rounded="lg"
+                  :subtitle="link.subtitle"
                   :title="link.title"
                   variant="tonal"
                />
@@ -40,6 +41,12 @@ const links = [
       href: router.resolve({ name: NamedRoute.DieRoller }).href,
       icon: 'mdi-dice-multiple',
       title: 'Die Roller',
+   },
+   {
+      href: router.resolve({ name: NamedRoute.RftGTheFirstEmperor }).href,
+      icon: 'mdi-rocket-launch',
+      subtitle: 'An automaton for Race For The Galaxy',
+      title: 'RftG: The First Emperor',
    },
 ];
 </script>

@@ -12,14 +12,20 @@
 </template>
 
 <script lang="ts" setup>
-import { computed, ref } from 'vue';
+import { computed, onMounted, ref } from 'vue';
+import { useTheme } from 'vuetify';
 import { useRoute } from 'vue-router';
 import NavigationDrawer from '@/components/NavigationDrawer.vue';
 
 const drawer = ref(true);
 const route = useRoute();
+const theme = useTheme();
 
 const pageTitle = computed(() => {
    return route.meta?.title || 'Board Game Sidekick';
+});
+
+onMounted(() => {
+   theme.global.name.value = window.matchMedia('(prefers-color-scheme: dark)') ? 'dark' : 'light';
 });
 </script>
